@@ -1,0 +1,14 @@
+{
+  "name": "terraform-lambda-dynamodb",
+  "version": "0.0.1",
+  "description": "Use terraform to publish API gateway -> lambda -> dynamodb",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Aaron Morris",
+  "license": "MIT",
+  "dependencies": {
+    "aws-sdk": "^2.1066.0"
+  }
+}
