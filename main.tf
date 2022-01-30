@@ -81,7 +81,6 @@ resource "aws_api_gateway_integration" "lambda" {
 resource "aws_api_gateway_deployment" "example" {
   depends_on = [
     aws_api_gateway_integration.lambda,
-    aws_api_gateway_integration.lambda_root,
   ]
 
   rest_api_id = aws_api_gateway_rest_api.ingress.id
@@ -103,7 +102,7 @@ resource "aws_lambda_permission" "gateway_may_call_lambda" {
 resource "aws_dynamodb_table" "sandbox" {
   name         = "sandbox"
   billing_mode = "PAY_PER_REQUEST"
-  hash_key     = "id"
+  hash_key     = "key"
   attribute {
     name = "key"
     type = "S"
